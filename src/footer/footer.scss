@@ -3,19 +3,21 @@
 footer {
   position: relative;
   height: 100px;
+  background: $lightColor;
 }
 .footer--wrapper {
-  position: absolute;
-  top: -40px;
-  background: $lightColor;
-  width: 100%;
-  height: 100px;
-  transform: skewY(-11deg);
+  &:before {
+    content: "";
+    background-image: linear-gradient(to left top, $lightColor 0%, $lightColor 50%, transparent 50%);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: -100px;
+    left: 0;
+  }
 }
 .footer--content {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  transform: skewY(11deg);
+  padding: 0 40px;
+  bottom: 40px;
 }
