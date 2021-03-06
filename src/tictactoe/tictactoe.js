@@ -40,11 +40,6 @@ class Board extends React.Component {
   }
 
   render() {
-    let status = `Next player: ${this.props.XIsNext ? "X" : "O"}`;
-    const winner = calculateWinner(this.props.squares);
-    if (winner) {
-      status = `Winner is ${winner}`;
-    }
 
     return (
       <div>
@@ -83,7 +78,6 @@ export default class tictactoe extends Component {
     const history = this.state.history;
     const current = history[history.length - 1];
     const squares = current.squares.slice();
-    console.log(squares);
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
