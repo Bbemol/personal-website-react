@@ -1,0 +1,21 @@
+@import "../styles/variables";
+
+footer {
+  position: relative;
+  height: 100px;
+}
+.footer--wrapper {
+  position: absolute;
+  top: -40px;
+  background: $lightColor;
+  width: 100%;
+  height: 100px;
+  transform: skewY(-11deg);
+}
+.footer--content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transform: skewY(11deg);
+}

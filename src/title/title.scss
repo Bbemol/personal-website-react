@@ -1,0 +1,50 @@
+@import '../styles/variables';
+
+.title {
+  background: $darkColor;
+  color: $lightColor;
+  padding: 120px 40px 40px;
+  height: 400px;
+  &--text {
+    margin-bottom: 16px;
+    &.-big {
+      span {
+        font-family: $secondaryFont;
+        letter-spacing: 1px;
+        font-size: 72px;
+      }
+    }
+    &.-small {
+      font-family: $primaryFont;
+      letter-spacing: 2px;
+      font-size: 17px;
+    }
+    &.-end {
+      span {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 56px;
+          top: 0;
+          right: -32px;
+          background: $primaryColor;
+          animation: blink 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

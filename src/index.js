@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './home';
 import About from './about';
+import TicTacToe from './tictactoe/tictactoe';
 import Error from './error';
 
-
-class Game extends React.Component {
+class App extends React.Component {
 
   render() {
 
@@ -16,6 +16,7 @@ class Game extends React.Component {
         <Switch>
           <Route path='/' component={Home} exact />
           <Route path='/about' component={About} />
+          <Route path='/tictactoe' component={TicTacToe} />
           <Route component={Error} />
         </Switch>
       </main>
@@ -29,7 +30,7 @@ class Game extends React.Component {
 
 ReactDOM.render(
   <BrowserRouter>
-    <Game />
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
