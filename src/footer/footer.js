@@ -13,8 +13,12 @@ export default class Footer extends Component {
               Contact me:<br/> benjperney[at]gmail.com
             </p>
             <p className="footer--content">
-              <a href="https://github.com/Bbemol" target="_blank"><img className="icons" src={github} /></a>
-              <a href="https://www.linkedin.com/in/benjamin-perney-6324b74a/" target="_blank"><img className="icons" src={linkedin} /></a>
+              <a href="https://github.com/Bbemol" rel="noreferrer" target="_blank">
+                <img className="icons" alt="github social icon" src={github} />
+                </a>
+              <a href="https://www.linkedin.com/in/benjamin-perney-6324b74a/" rel="noreferrer" target="_blank">
+                <img className="icons" alt="linkedin social icon" src={linkedin} />
+              </a>
             </p>
           </div>
         </footer>
